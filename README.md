@@ -2,7 +2,7 @@
 ## Trabajo Práctico de Ingenieria de Software II
 ### Facultad de Ciencia y Tecnología UADER
 
-Figura: figura/download_image_1711226516226.png
+Figura: [figura/download_image_1711226516226.png](https://github.com/sofialaballeja21/TP_1/blob/main/figura/download_image_1711226516226.png)
 
 Lista ordenada 1: 
  Sincronícelo con el repositorio github.
