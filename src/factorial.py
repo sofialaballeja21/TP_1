@@ -21,11 +21,14 @@ def factorial(num):
         return fact 
 
 if len(sys.argv) < 2:
-    num = int(input("Por favor, ingresa un número para calcular su factorial: "))
+    range_input = input("Por favor, ingresa el rango (desde-hasta) para calcular los factoriales: ")
+    start, end = map(int, range_input.split("-"))
 else:
-    num = int(sys.argv[1])
+    range_input = sys.argv[1]
+    start, end = map(int, range_input.split("-"))
 
-print("Factorial", num, "! es", factorial(num)) 
+for num in range(start, end+1):
+    print("Factorial", num, "! es", factorial(num))
 
 
 
