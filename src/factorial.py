@@ -7,7 +7,7 @@
 #*-------------------------------------------------------------------------*
 import sys
 def factorial(num): 
-    if num < 0: 
+    if num < 0: #No acepta números negatigos, ya que su factorial no existe.
         print("Factorial de un número negativo no existe")
 
     elif num == 0: 
@@ -27,11 +27,11 @@ else:
     
 if "-" not in range_input:
     print("El formato del rango es incorrecto. Debe ser 'desde-hasta'.")
-    sys.exit()
+    sys.exit() #Se ingresa el rago de numeros con el formato 10 20 (sin -)
 
 start, end = map(int, range_input.split("-"))
 start = int(start) if start else 1
-end = int(end) if end else 60
+end = int(end) if end else 60 #Limite de calcular su factorial (-hasta 60)
 
 if start <= 0 or end <= 0:
     print("Los números negativos no son válidos.")
