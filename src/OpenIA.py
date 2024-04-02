@@ -1,11 +1,19 @@
-from OpenIA import openai, Error
+#Importar las librerias necesarias
+from OpenIA import openai, Error # Importar el módulo openai y la excepción Error desde OpenIA
 import readline
 import sys
 
+#Clave de API para acceder a OpenIA
 api_key = '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'
+
+##Variable para almacenar la última consulta realizadas
 ultima_consulta = ""
+
+#Variable para almacenar las consultas realizadas
 buffer_consultas = []
 
+
+#Función para consultar el modelo de chatGPT con una consulta dada
 def consultar_chatGPT(consulta):
     try:
         # Formatear la consulta con "You:" antes de enviarla
@@ -29,10 +37,12 @@ def consultar_chatGPT(consulta):
     except Error as e:
         print("Se produjo un error al llamar al API de OpenAI:", e)
 
+#Función para obtener la ultima consulta realizada
 def obtener_ultima_consulta():
     global ultima_consulta
     return ultima_consulta
 
+#Función principal del programa
 def main():
     global buffer_consultas
     conversacion = False
@@ -41,6 +51,7 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1] == "--convers":
         conversacion = True
     
+    #Ciclo principal del programa
     while True:
         try:
             # Leer la consulta del usuario
@@ -79,6 +90,10 @@ def main():
         except Exception as e:
             print("Se produjo un error durante la ejecución:", e)
 
+#Entrada principal del programa
 if __name__ == "__main__":
+    #Establecer la clave de API de OpenIA
     openai.api_key = api_key
+    #Ejecutar la función principal del programa
     main()
+
